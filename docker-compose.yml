@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: "demetra"
+      POSTGRES_USER: "demetra"
+      POSTGRES_PASSWORD: "localpass"
+    ports:
+      - "5433:5432"
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6400:6379"
